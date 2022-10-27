@@ -1,0 +1,266 @@
+#app {
+    height: 0px;
+}
+
+body{
+    overflow: hidden;
+    margin: 0%;
+    padding: 0%;
+}
+
+noscript{
+    position: relative;
+    text-align: center;
+    top: 0;
+    right: 50%;
+}
+
+/*
+    CSS Rules for the info popup that shows when a profile is clicked
+*/
+#pInfo{
+    background: white;
+    position: fixed;
+    top: 150%;
+    text-align: center;
+    border: solid 8px #ffcc66;
+    font-family: 'Lato', Courier, monospace;
+    font-size: 2vh;
+    width: min(60%, 800px);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60vh;
+    box-shadow: -5px 5px 5px  rgba(0, 0, 0, .7);
+    overflow: auto;
+
+    animation: infoEnter 0.25s ease-out 1;
+    transition: all 0.25s ease-out;
+}
+
+#pInfo h1 {
+    margin-bottom: 1rem;
+}
+
+@keyframes infoEnter {
+    from {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.smallinf{
+    text-align: left;
+    margin-left: 50px;
+}
+
+#links{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linkBox{
+    padding: 30px;
+    color: gray;
+}
+
+#close{
+    border: none;
+    font-family: 'Lato' monospace;
+    font-size: 32px;
+    position: relative;
+    left: 45%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#close:hover{
+    color: red;
+}
+
+#bio{
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+#fileLn{
+    color: black;
+}
+
+/*
+    Main page Hierarchy
+*/
+#teampage {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 58px;
+    background-color: rgb(34, 34, 34);
+    /*background-image: url("../images/outside_blurred.jpg");*/
+    background-size: cover;
+}
+
+#teamselect {
+    display: flex;
+    width: 90%;
+    height: 100px;
+    margin: 10px auto;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+#selectLn{
+    color: #353535;
+    border-top: 1px solid black;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.teambutton {
+    height: 70%;
+    width: 200px;
+
+	border-radius:3px;
+	border:0px solid #a5bb55;
+	display:inline-block;
+	cursor:pointer;
+    padding:0.2em 1.45em;
+    margin:0.1em;
+    font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #6d6d6d;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Lato', sans-serif;
+    color:#000000;
+    background-color:#b4c265;
+    text-align:center;
+    transition: all 0.15s ease-in-out;
+}
+
+.teambutton:hover {
+    border-color:#7a7a7a;
+    background-color:#AAAAAA;
+}
+
+.teambutton:active {
+    background-color:#ffcc66;
+}
+
+.teambutton:focus {
+    outline: none;
+}
+
+.currentButton {
+    background-color:#FFCC66;
+    height: 75%;
+    width: 250px;
+}
+
+#teampagecontent {
+    width: 95vw;
+    height: auto;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#production {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    justify-content: center;
+    margin: 0px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-rows: 300px;
+    gap: 15px;
+}
+
+#gridcontainer {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    justify-content: center;
+    margin: 0px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-rows: 300px;
+    gap: 15px;
+}
+
+#logcontainer {
+    width: 95%;
+    height: auto;
+    margin: 0px auto;
+
+    background-color: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(3px);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.placeholderlog {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    margin: 35px;
+}
+
+.teamtile {
+    border: 1px solid black;
+    width: 250px;
+    height: 300px;
+    background-color:#CCCCCC;
+    color: black;
+    text-align: center;
+    text-overflow: clip;
+    padding: 10px;
+    position: relative;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .4) ;
+}
+
+.teamtile h1 {
+    font-size: 19pt;
+    font-style: normal;
+    font-weight:bold;
+}
+
+.teamtile h2 {
+    font-size: 10pt;
+    font-style: normal;
+    font-weight:bold;
+}
+
+.teamtile img {
+    width: 200px;
+    height: 200px;
+
+    margin-bottom: 10px;
+}
+
+.tileButton {
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+
+    top: 0;
+    left: 0;
+}
+
+.tileButton:hover {
+    background-color: rgba(0, 0, 0, .4);
+}

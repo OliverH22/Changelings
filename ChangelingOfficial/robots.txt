@@ -1,0 +1,5 @@
+# Group 1
+User-agent: *
+Disallow: /form.html
+Allow: /images
+Sitemap: http://www.changelingvr.com/sitemap.xml

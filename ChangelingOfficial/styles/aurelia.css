@@ -1,0 +1,220 @@
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #171A21;
+    background-color: #171A21;
+    overflow: auto;
+    color:white;
+}
+
+body{
+    overflow: hidden;
+}
+
+#header{
+    margin-left: 17%;
+    width: max-content;
+    color:  white;
+    
+}
+
+#header h1{
+    font-family: 'DM Serif Display', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42pt;
+    margin-bottom: 0%;
+}
+
+#header p{
+    font-family: 'DM Serif Display', serif;
+    margin-top: 2px;
+    padding-left: 2rem;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+a:link, a:visited{
+    color: white;
+}
+
+#CaseFileCont img{
+    width: 250px;
+    height: 250px;
+}
+
+#UnlockedSite{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 16%;    
+}
+
+#return{
+    font-size: 30px;
+}
+
+#AboutInfo{
+    margin: .5rem;
+}
+
+#profile{
+    /* border-radius: 70%; */
+    width: auto;
+    height: 250px;
+}
+
+/*Conact Information*/
+#ContactInfo{
+    /* display: flex; */
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+#ContactInfo div{
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#ContactInfo h3 {
+    margin: 0;
+}
+
+#ContactInfo img {
+    margin-right: 10px;
+    height: 25px;
+    width: 30px;
+    color: white;
+    filter: invert(1);
+}
+
+.CCInfo{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#CaseFileCont{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    background-color: #e2a757;
+    color: black;
+    height: 550px;
+}
+
+#Menu{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
+}
+
+/* sidebar stuff */
+/* #link{
+    padding-left: 2rem;
+} */
+
+#sidebar{
+    width: 15vw;
+    border-right: .5vw solid saddlebrown;
+    position: fixed;
+    background-color: #171A21;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: .5vw;
+    text-align: center;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+/* Case file stuff */
+/* #fileReader{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+} */
+
+/* #caseTitle{
+    margin-left: 1%;
+} */
+
+.CaseFile{
+    padding: 5px;
+}
+
+#fileLeft{
+    width: 500px;
+    padding-left: 10px;
+}
+
+#fileRight{
+    padding-left: 30px;
+}
+
+#fileNav{
+    display: inline-block;
+}
+
+.cfButton{
+    background-color: #e2a757;
+    border: none;
+    width: 8em;
+    height: 1.6em;
+    font-family: 'Courier New', Courier, monospace;
+    border-top-right-radius: 80px;
+    border-top-left-radius: 80px;
+}
+
+#file2,#file3{
+    background-color: rgb(103, 78, 41);
+}
+
+.cfButton:hover{
+    cursor: pointer;
+}
+
+.cfButton:active{
+    background-color: white;
+}
+
+@media all and (max-width: 900px){
+    #CaseFileCont{
+        width: 100%; 
+        height: 200px; 
+        margin: auto;
+        display: block;
+        transition: 1s;
+    }
+    #CaseFileCont:hover{
+        transition: 1s;
+        height: 500px;
+    }
+    .CaseFile{
+        /* opacity: 0; */
+       z-index: -2;
+    }
+    
+    #CaseFileCont img{
+        display: block;
+        float: right;
+    }
+
+    img{
+        visibility: hidden;
+    }
+    
+    #UnlockedSite{margin: auto;}
+    #sidebar img{width: 50px;}
+    #sidebar{visibility: hidden;}
+}

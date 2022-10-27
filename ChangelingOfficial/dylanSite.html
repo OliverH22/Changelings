@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Changeling | Dylan's Site</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">    
+    <script src="scripts/aureliaSite.js"></script>
+    <script src="scripts/caseFiles.js"></script>
+    <script src="scripts/dylanMove.js"></script>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#963765">
+	<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#963765">
+    
+    <style>        
+
+    body{
+        margin: 0;
+        padding: 0;       
+        background-color: black;
+
+    }
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+    .slide{
+
+        width: 50vw;
+        height: 50vh;
+
+    }   
+
+    ::-webkit-scrollbar{
+        display:none;
+    }
+
+   
+
+   .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr; */
+        grid-auto-flow: 90px minmax (200px, auto);
+        grid-gap: 0px;
+   }
+
+   #theWall{
+        position: absolute;
+        top: 1%;
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+   }
+
+    #myWall{       
+        
+        background-repeat: repeat-x;
+        
+    }
+
+    #father{
+        
+        background-image: url("images/AureliaSiteImages/fatherPortraitWOBackground.png");
+        background-repeat: no-repeat;
+        transform: rotate(-1);
+        background-size: auto 75vh;        
+        top: 25%;
+        left: 40vw;
+        transform: scaleX(-1);
+        
+    }
+
+    #bassinet{        
+        
+        background-position: center;        
+        top: 10vh;
+        left: 5vw;
+        bottom: 10vh;
+        z-index: 2;
+    }
+
+    #desk{
+        /* position: absolute; */
+        top: 30%;              
+        left: 100vw;
+        height: 25vh;        
+        transform: scaleY(1);
+        transform: rotate(-45deg);        
+        background-size: contain;
+        background-position: top;
+        animation: marguee 20s linear infinite;
+    }
+
+    #myDoor1{
+        position: absolute;
+        top: 27%;              
+        left: 97vw;
+        height: 80vh;
+        width: 10vw;        
+    }
+
+    #myDoor2{
+        position: absolute;
+        top: 27%;              
+        left: 17vw;
+        height: 80vh;
+        width: 10vw;        
+    }
+    #myDoor3{
+        position: absolute;
+        top: 27%;              
+        left: 174vw;
+        height: 80vh;
+        width: 10vw;        
+    }
+
+    #wallPaper1{        
+        position: absolute;        
+        left: 5vw;
+        top: 2%;        
+        height: 120vh;
+        width: 50vw;
+    }
+
+    #wallPaper2{        
+        position: absolute;        
+        top: 10%;
+        left: 50vw;
+        height: 100vh;
+        width: 20vw;
+    }
+
+    #wallPaper3{        
+        position: absolute;        
+        top: 10%;
+        left: 150vw;
+        height: 100vh;
+        width: 20vw;
+    }
+
+    @keyframes marquee{
+        0%{
+            transform: translate3d(0,0,0);
+        }
+        100%{
+            transform: translate3d(-200vw,0,0);
+        }
+    }  
+
+   
+    </style>
+
+</head>
+
+<body>
+    <noscript>We're sorry, but this experience requires JavaScript to run</noscript>
+
+<div class="grid">
+
+    <section>        
+        <div id="wallPaper1"><img src="images/AureliaSiteImages/wallpapers1.png"></div>
+        <div id="wallPaper2"><img src="images/AureliaSiteImages/wallpaper2.png"></div>
+        <div id="wallPaper3"><img src="images/AureliaSiteImages/wallpaper3.png"></div>
+        <!-- <div id="bassinet"><img src="images/AureliaSiteImages/bassinet.png" data-speed="40" class="layer"></div> -->
+
+        <!-- This Div section creates the walls and doors for the experience and also gives the value of the parallax in the form of data-speed. Increasing the number increases
+        the parallax intensity-->
+        <div id="theWall" class="layer" data-speed="-5">
+            <div id="myWall"><img  src="images/AureliaSiteImages/Hallway.png"></div>
+            <div id="myDoor1"><img  src="images/AureliaSiteImages/door.png"></div>
+            <div id="myDoor2"><img  src="images/AureliaSiteImages/door.png"></div>
+            <div id="myDoor3"><img  src="images/AureliaSiteImages/door.png"></div>
+
+        </div>
+        
+        <!--This div is the father and is linked to dylanMove.js which gives him the ability to move via the arrow keys -->
+        <div id="father" walking="true"></div>
+        <!-- <img id="desk" src="images/AureliaSiteImages/desk.png" data-speed="30" class="layer"> -->     
+
+    </section>
+
+</div>
+<!-- This Script makes the website a parallax giving the User the ability to move the objects via mouse movements -->
+    <script type="text/JavaScript">
+        document.addEventListener("mousemove" , parallax);
+        function parallax(e){
+            this.querySelectorAll('.layer').forEach(layer => {
+                const speed = layer.getAttribute('data-speed')
+                // This attribute after data-speed is called controls how fast the parallax will be moved.
+                const x = (window.innerWidth - e.pageX*speed)/100
+                const y = (window.innerHeight - e.pageY*speed)/100
+               
+
+                layer.style.transform = `translateX(${x}px)  translateY(${y}px)`
+            })
+        }
+    </script>    
+
+    
+    <script src="parallax.js"></script>    
+        
+    
+</body>
+
+</html>

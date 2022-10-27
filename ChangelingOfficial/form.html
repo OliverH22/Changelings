@@ -1,0 +1,227 @@
+<html lang="en">
+
+<head>
+	<title>ChangelingVR Member Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#963765">
+	<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#963765">
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/@popperjs/core@2"></script>
+	<script type="text/javascript" src="https://unpkg.com/tippy.js@6"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.9/cropper.min.js"></script>
+	<script type="text/javascript" src="scripts/imageutil.js"></script>
+	<script type="text/javascript" src="scripts/form.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.9/cropper.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/form.css" />
+</head>
+
+<body>
+	<noscript>This form will not work without JavaScript enabled</noscript>
+	<h1>ChangelingVR Member Form</h1>
+	<p>Fill out the information below to be submitted to the team page</p>
+	<p>
+		Note: If you already have information stored on the server, it will be pre-loaded into the form<br/>
+		This does not include the photo. If you wish to keep the photo already on the server (or use the default avatar if you haven't yet uploaded one), leave the photo area of the form empty. If you wish to override an existing photo, upload a new photo to the form and make sure you crop and accept it.
+	</p>
+	<sub>*: Required Field | **: Will invalidate form if entered incorrectly</sub>
+	<form>
+		<div class="row">
+			<div id="name">
+				<h2>Name*</h2>
+				<div class="labeled-input">
+					<label for="pref_Name">Preferred/Displayed name on the site</label>
+					<input id="pref_Name" type="text" name="pref_Name" placeholder="Name" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="bio">
+				<h2>Bio*</h2>
+				<div class="labeled-input">
+					<div>
+						<label for="pref_Bio">Short bio</label>
+						<span>0 / 280</span>
+					</div>
+					<textarea id="pref_Bio" name="pref_Bio" rows="4" maxlength="280"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="terms">
+				<h2>Terms*</h2>
+				<fieldset id="check_Terms">
+					<legend>Check all terms that apply</legend>
+					<div class="flexed">
+						<input type="checkbox" id="term_Permanent" name="term_Permanent" value="Permanent" />
+						<label for="term_Permanent">Permanent</label><br />
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="term_Summer2020" name="term_Summer2020" value="Summer 2020" />
+						<label for="term_Summer2020">Summer 2020</label><br />
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="term_Fall2020" name="term_Fall2020" value="Fall 2020" />
+						<label for="term_Fall2020">Fall 2020</label><br />
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="term_Spring2021" name="term_Spring2021" value="Spring 2021" />
+						<label for="term_Spring2021">Spring 2021</label>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="term_Summer2021" name="term_Summer2021" value="Summer 2021" />
+						<label for="term_Summer2021">Summer 2021</label>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="term_Fall2021" name="term_Fall2021" value="Fall 2021" />
+						<label for="term_Fall2021">Fall 2021</label>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="term_Spring2022" name="term_Spring2022" value="Spring 2022" />
+						<label for="term_Spring2022">Spring 2022</label>
+					</div>
+				</fieldset>
+			</div>
+			<div id="teams">
+				<h2>Teams*</h2>
+				<fieldset id="check_Teams">
+					<legend>Check all teams that apply</legend>
+					<div class="flexed">
+						<input type="checkbox" id="team_Art" name="team_Art" value="Art" />
+						<label for="team_Art">Art Team</label><br />
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="team_Audio" name="team_Audio" value="Audio" />
+						<label for="team_Audio">Audio Team</label><br />
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="team_Development" name="team_Development" value="Development" />
+						<label for="team_Development">Dev Team</label><br />
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="team_Web" name="team_Web" value="Web" />
+						<label for="team_Web">Web Team</label>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="row">
+			<div id="roles">
+				<h2>Roles*</h2>
+				<fieldset id="check_Roles">
+					<legend>Check all roles that apply</legend>
+					<div class="flexed">
+						<input type="checkbox" id="role_Lead" name="role_Lead" value="Lead" />
+						<label for="role_Lead">Lead</label><br/>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="role_Programmer" name="role_Programmer" value="Programmer" />
+						<label for="role_Programmer">Programmer</label><br/>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="role_LevelDesigner" name="role_LevelDesigner" value="Level Designer" />
+						<label for="role_LevelDesigner">Level Designer</label><br/>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="role_UI/UXDesigner" name="role_UI/UXDesigner" value="UI/UX Designer" />
+						<label for="role_UI/UXDesigner">UI/UX Designer</label><br/>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="role_SoundDesigner" name="role_Designer" value="Sound Designer" />
+						<label for="role_SoundDesigner">Sound Designer</label><br/>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="role_Composer" name="role_Composer" value="Composer" />
+						<label for="role_Composer">Composer</label><br/>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="role_ConceptArtist" name="role_ConceptArtist" value="Concept Artist" />
+						<label for="role_ConceptArtist">Concept Artist</label><br/>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="role_3DModeler" name="role_3DModeler" value="3D Modeler" />
+						<label for="role_3DModeler">3D Modeler</label><br/>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="role_2DArtist" name="role_2DArtist" value="2D Artist" />
+						<label for="role_2DArtist">2D Artist</label><br/>
+					</div>
+					<div class="flexed">
+						<input type="checkbox" id="producer" name="producer" value="Producer" />
+						<label for="producer">Producer</label><br/>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="row">
+			<div id="links">
+				<h2>Links**</h2>
+				<p>These don't have to exactly match the suggestions (e.g. can use github.com/user or user.github.io, or even a specific project if desired); these are just identified by what icon will be shown on the teams page (technically you can put whatever you want that's a valid URL, but please don't confuse people). Any or all of these can be left blank if they are not applicable.</p>
+				<div class="labeled-input">
+					<label for="link_Website">Website / Portfolio</label>
+					<input id="link_Website" type="url" name="link_Website" placeholder="https://whateveryouwant.com.notasite" />
+					<label for="link_Secondary">Secondary Site</label>
+					<input id="link_Secondary" type="url" name="link_Secondary" placeholder="https://whateveryouwant.com.notasite" />
+					<label for="link_GitHub">GitHub</label>
+					<input id="link_GitHub" type="url" name="link_GitHub" placeholder="https://github.com/your-username" />
+					<label for="link_LinkedIn">LinkedIn</label>
+					<input id="link_LinkedIn" type="url" name="link_LinkedIn" placeholder="https://www.linkedin.com/in/your-user-ID-or-custom-URL" />
+					<label for="link_Email">Email</label>
+					<input id="link_Email" type="email" name="link_Email" placeholder="contactme@elgoog.notasite" />
+				</div>
+			</div>
+		</div>
+		<div id="photo">
+			<h2>Photo</h2>
+			<div id="photo-upload" class="labeled-input">
+				<label for="upload_Photo" aria-hidden="true">Upload photo for cropping (will be resized to 500x500 .jpg when uploaded to the server)</label>
+				<div>
+					<input aria-hidden="true" tabindex=0 role="button" type="file" id="upload_Photo" name="upload_Photo" accept="image/jpeg, image/png" />
+					<p aria-label="Upload photo for cropping (will be resized to 500x500 .jpg when uploaded to the server)">Select File</p>
+				</div>
+			</div>
+			<div id="photo-crop">
+				<div id="photo-cropper-area">
+					<img src="" alt="photo goes here" />
+				</div>
+				<div id="photo-cropper-controls" class='hidden'>
+					<button id="photo-cropper-cancel" type="button"><span>Cancel</span></button>
+					<button id="photo-cropper-accept" type="button"><span>Accept</span></button>
+				</div>
+			</div>
+		</div>
+	</form>
+	<div class="alt-row">
+		<div class="progress-bar">
+			<div class="progress-bkgd"></div>
+			<div id="submission-progress" class="progress-fill">
+				<span class="hidden">0</span>
+			</div>
+		</div>
+		<button id="submit"><span>Submit</span></button>
+	</div>
+	<div id="msg" class="hidden">
+		<div class="closeButton" type="button"><img src="images/navbar/hamburger-close.svg"/></div>
+		<h2></h2>
+		<p></p>
+	</div>
+</body>
+
+</html>

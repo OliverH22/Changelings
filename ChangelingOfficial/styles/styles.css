@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+/* Font importing */
+.loadSunRise {
+	position: absolute;
+	right: -30em;
+	font-family: 'Waiting for the Sunrise', cursive;
+}
+
+.loadHachiMaruPop {
+	font-family: 'Hachi Maru Pop';
+}
+
+.loadArchitectsDaughter {
+	font-family: 'Architects Daughter';
+}
+
+/* Noscript styles */
+noscript {
+	position: absolute;
+	font-size: 2rem;
+	top: 5rem;
+	left: 5rem;
+	color: white;
+}
+
+/* Scrollbar style */
+::-webkit-scrollbar-track {
+	background: rgb(9, 9, 9);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #4b4552;
+	border-radius: 1rem;
+	transition: background 0.25s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #635b6a;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background-color: #82768c;
+}
+
+::-webkit-scrollbar {
+	width: 1rem;
+}
+
+/* Main styles for pages */
+html { 
+	height: 100%;
+	background-color: black;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: black;
+}
+
+main {
+	overflow-x: hidden;
+}
+
+
+/*Navbar Style Rules*/
+#navbar {
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	font-weight: normal;
+	font-family: 'Lato', sans-serif;
+	text-align: right;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #330033;
+	border-bottom: 2px solid #ffcc66;
+	padding: 0 2rem;
+	z-index: 100;
+}
+
+/*Transparent background and backdrop blur for navbar*/
+@supports((-webkit-backdrop-filter: (blur(100px))) or (backdrop-filter: blur(100px))){
+	#navbar, .dropdown .dropbtn{
+		background: transparent;
+		backdrop-filter: blur(100px);
+	}
+}
+
+#navbar nav {
+	display: flex;
+}
+
+/*Navbar link and dropdown button*/
+#navbar a, .dropbtn {
+	color: #ffcc66;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	transition: all 0.15s ease-in-out;
+	padding: 1rem; 
+}
+
+#navbar a:focus, .dropdown:hover .dropbtn {
+	outline-color: white;
+}
+
+.dropbtn:focus {
+	outline: none;
+}
+
+#navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #fff5;
+	text-decoration: none;
+	color: white;
+}
+
+#navbar img:hover {
+	filter: brightness(0) invert(1);
+}
+
+#navbar a:active {
+	background-color: #655979;
+}
+
+/* References only the first anchor tag that is a direct child of the navbar, otherwise it will hit the dropdown menu */
+#navbar nav > a:nth-of-type(1) {
+	margin-right: auto;
+	padding: 0;
+}
+
+/* Navbar logo */
+#navbar a:nth-of-type(1) img {
+	height: 3.5rem;
+	width: auto;
+	padding: 0.35rem;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+	border: none;
+	cursor: pointer;
+	background-color: #330033;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #330033;
+	min-width: 255px;
+	text-align: left;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+	text-decoration: none;
+	display: block;
+}
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #330033}
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Download button */
+#navbar .downloadButton {
+	padding: 0.5rem 1rem;
+	background-color: #ffcc66;
+	margin-right: -2rem;
+	color: #330033;
+	box-shadow: none;
+	outline: none;
+	transition-property: border, color, background-color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	font-size: 1.25rem;
+	font-family: 'Lato', sans-serif;
+	cursor: pointer;
+	display: block;
+	border: 8px solid transparent;
+}
+
+#navbar .downloadButton:hover {
+	color: #ffcc66;
+	text-decoration: none;
+}
+
+#navbar .downloadButton:active {
+	background-color: #655979;
+}
+
+/* Hamburger icon for responsive navbar */
+.hamburger-button,
+.hamburger-close {
+	display: none;
+}
+
+/* Responsive navbar */
+@media screen and (max-width: 600px) {
+	#navbar {
+		position: fixed;
+		width: 100%;
+		text-align: left;
+		transition-property: opacity, transform;
+		transition-duration: 1s;
+		transition-timing-function: ease-in-out;
+		z-index: 5;
+	}
+
+	#navbar::before {
+		content: "";
+		position: absolute;
+		background-color: #00000099;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		display: block;
+		z-index: -1;
+	}
+	
+	#navbar nav {
+		flex-direction: column;
+	}
+	
+	#navbar a, .dropbtn, #navbar .downloadButton {
+		display: block;
+		font-size: 2rem;
+		margin-right: 5rem;
+	}
+	
+	#navbar a:nth-of-type(1) img {
+		padding: 1rem;
+		height: 5rem;
+	}
+	
+	.hamburger-button,
+	.hamburger-close {
+		cursor: pointer;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		font-family: 'Lato', sans-serif;
+		font-weight: lighter;
+		display: block;
+	}
+	
+	.hamburger-button img,
+	.hamburger-close img {
+		height: 100%;
+		width: auto;
+	}
+	.hamburger-button img{
+        transform: scale(.75);
+    }
+    .hamburger-close img{
+        transform: scale(.75);
+    }
+
+	
+	.hamburger-button {
+		color: white;
+		background-color: #00000099;
+		padding: 0.75rem;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 5rem;
+		height: 5rem;
+		text-align: center;
+		transition-property: transform;
+		transition-duration: 1s;
+		transition-timing-function: ease-in-out;
+	}
+	
+	.hamburger-close {
+		position: absolute;
+		color: white;
+		right: 0.5rem;
+		top: 1rem;
+		width: 3rem;
+		height: 3rem;
+	}
+	
+	.inactive::before {
+		display: none;
+	}
+	
+	.inactive {
+		transform: translateX(-50rem);
+	}
+	
+	.active {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	
+	.inactive .hamburger-button {
+		transform: translateX(50rem);
+	}
+	
+	.active .hamburger-button {
+		transform: translateX(-50rem);
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#navbar a:nth-of-type(1) img {
+		margin-left: -1.5rem;
+		padding: 1rem;
+		height: 4rem;
+	}
+}
+
+.current-page {
+	text-decoration: underline;
+}
+
+::selection {
+	text-shadow: none;
+	background-color: #361f4c;
+	color: white;
+}
+
+::-moz-selection {
+	text-shadow: none;
+	background-color: #361f4c;
+	color: white;
+}
+
+/* Reduced motion */
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}

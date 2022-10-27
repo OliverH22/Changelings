@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Changeling - a VR narrative mystery</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#963765">
+	<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#963765">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- SEO -->
+	<meta name="description" content="Home page for Changeling, a VR narrative mystery game by Xana Adhoc."/>
+	<meta name="keywords" content="rit,rochester,institute,of,technology,tech,magic,magic spell studios,igm,rit igm,rit magic,xana,adhoc,xana adhoc,vr,virtual reality,oculus,rift,oculus rift,oculus quest,quest,changeling,changelingvr,narrative,mystery,vr narrative mystery"/>
+	<link rel="canonical" href="https://www.changelingvr.com/"/>
+	<!-- OpenGraph (Facebook) -->
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="https://changelingvr.com/images/social_fb.jpg"/>
+	<meta property="og:image:type" content="image/jpg"/>
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:title" content="Changeling - a VR narrative mystery"/>
+	<meta property="og:url" content="https://www.changelingvr.com/"/>
+	<meta property="og:description" content="Home page for Changeling, a VR narrative mystery game by Xana Adhoc."/>
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:image" content="https://changelingvr.com/images/social_twr.jpg" />
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/index.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script type="module" src="./scripts/loader.js"></script>
+</head>
+
+<body>
+	<noscript>We're sorry, but this experience requires JavaScript to run</noscript>
+	<div id="app">
+		<navbar></navbar>
+		<main class="position-relative">
+			<landing></landing>
+			<narrative></narrative>
+			<div class="scene">
+				<home-character
+					id='mainchar'
+					char="Aurelia Walker"
+					char-Info="Aurelia is specialized in dealing with mind-altering or otherwise psychological effects and creatures, though she can diagnose most magical disturbances and refer people to an expert when physical force is required. In addition to her expertise, she also possesses the ability to enter the minds of her clients when physical contact is made, allowing her to screen for any magical influences directly."
+					image-path="images/home/aurelia.svg"
+					bg-image="images/home/living_room_far.jpg"
+					bg-image-alt="living room image"
+					instructions="Click portrait to open experience."
+					link="dwAuth.html">
+				</home-character>
+				<home-character
+					id='mother'
+					char="Angela Summers"
+					char-Info="The loving mother, who cares deeply for her family. She is fairly smart, and used to be a rebellious youth in her time, but has grown to be warm and amiable. Under this warmth is her fear of losing not only her baby, but her whole family, driven by the loss of loved ones in her past."
+					image-path="images/home/mom.svg"
+					bg-image="images/home/living_room_watercolor.jpg"
+					bg-image-alt="living room image"
+					instructions="Experience under construction.">
+				</home-character>
+				<home-character
+					id='father'
+					char="Dylan Huang"
+					char-Info="The disgruntled, yet extremely hardworking father of the family. He wants to do everything he can to support this small family of his. Because of this, he greatly values control and bases his value as a person on his ability to maintain it. When their baby changed, his hold on his life shattered, and with it his self-esteem."
+					image-path="images/home/dad.svg"
+					bg-image="images/home/living_room_far.jpg"
+					bg-image-alt="living room image"
+					instructions="Experience under construction."
+					link="dylanSite.html">					
+				</home-character>
+				<home-character
+					id='son'
+					char='Douglas Summers-Huang'
+					char-Info="The eldest child, a closed off, quiet young boy who is absorbed in reading and writing good stories. Inspired by some of the stories he has read, he is starting to believe the world he’s in is not as it appears."
+					image-path="images/home/tween.svg"
+					bg-image="images/home/living_room_watercolor.jpg"
+					bg-image-alt="living room image"
+					instructions="Experience under construction.">
+				</home-character>
+				<home-character
+					id='daughter'
+					char='Kirsten Summers-Huang'
+					char-Info="The middle child, a  three and a half year old with a positive and pure personality. She believes everything around her is filled with magic and fantasy. Her toys are not only for playing, but are also building blocks to build her magical world."
+					image-path="images/home/toddler.svg"
+					bg-image="images/home/living_room_far.jpg"
+					bg-image-alt="living room image"
+					instructions="Click portrait to open experience."
+					link="experiences/ToddlerExperience/index.html">
+				</home-character>
+				<home-character
+					id='infant'
+					char="Tobi Summers-Huang"
+					char-Info="The baby is taken care of by everyone in the family. Usually aloof and curious, the baby suddenly changed one day. No one knows why they did, only that something is very off with them now."
+					image-path="images/home/baby.svg"
+					bg-image="images/home/baby_room.jpg"
+					bg-image-alt="living room image"
+					instructions="Experience under construction.">
+				</home-character>
+			</div>
+		</main>
+	</div>
+</body>
+
+</html>
+
+

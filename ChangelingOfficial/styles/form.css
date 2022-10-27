@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+noscript {
+	position: absolute;
+	font-size: 2rem;
+	top: 5rem;
+	left: 5rem;
+	color: white;
+}
+
+html {
+	height: 100vh;
+	background-color: #bbb;
+	color: #333;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	font-family: 'Lato', sans-serif;
+}
+
+html * {
+	box-sizing: border-box;
+}
+
+body {
+	width: 80vw;
+	margin: auto;
+}
+
+body p {
+	font-size: 1.33rem;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+}
+
+.row > div {
+	flex: 1 1 auto;
+	margin: 0 auto;
+	align-self: flex-start;
+}
+
+input,
+textarea,
+#submit,
+#photo-cropper-controls button,
+#photo-upload > div {
+	background-color: #ddd;
+	color: #444;
+	border: solid 4px #aaa;
+	border-radius: 4px;
+	transition: all 0.25s ease-out;
+	margin: 0;
+}
+
+input,
+textarea {
+	border-bottom-color: #fff;
+	border-right-color: #fff;
+}
+
+input[type=checkbox],
+#submit,
+#photo-cropper-controls button,
+#photo-upload > div {
+	border-bottom-color: #777;
+	border-right-color: #777;
+}
+
+.labeled-input {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+label,
+input,
+textarea {
+	font-size: 1.25rem;
+	font-weight: lighter;
+	margin: 0.5rem 0;
+}
+
+input:focus,
+input[type=checkbox]:focus::before,
+textarea:focus {
+	border-color: cornflowerblue;
+}
+
+input:hover,
+input[type=checkbox]:hover::before,
+textarea:hover {
+	box-shadow: inset 0 0 0.35rem #555;
+}
+
+#photo-upload > div:hover {
+	box-shadow: 0 0 0.35rem #555;
+}
+
+input:active,
+input[type=checkbox]:active::before,
+textarea:active,
+#photo-upload > div:active {
+	border-color: chartreuse;
+}
+
+input,
+textarea {
+	padding: 0.5rem;
+}
+
+input:invalid {
+	outline: 0.25rem solid red;
+}
+
+textarea {
+	font-family: 'Arial', sans-serif;
+}
+
+#bio .labeled-input > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
+}
+
+#bio span {
+	font-size: 1.25rem;
+	font-weight: lighter;
+}
+
+.flexed {
+	display: flex;
+	align-items: center;
+	grid-gap: 0 0.5rem;
+}
+
+.flexed label {
+	flex: 1 1 auto;
+}
+
+input[type=checkbox] {
+	appearance: none;
+	position: relative;
+	width: 2rem;
+	height: 2rem;
+	flex: 0 0 2rem;
+}
+
+input[type=checkbox]::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	transition: all 0.25s ease-out;
+}
+
+input[type=checkbox]:checked::before {
+	background-image: url(../images/checkmark.svg);
+	background-size: 90% 90%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+input[type=file] {
+	opacity: 0;
+	width: 100%;
+	position: relative;
+}
+
+input[type=file] + p::after {
+	content: "";
+	position: absolute;
+	top: -1.5rem;
+	left: 0;
+	right: 0;
+	bottom: -1.5rem;
+	outline: 4px solid transparent;
+	transition: outline 0.5s ease-in-out;
+}
+
+input[type=file]:focus + p::after {
+	outline-color: cornflowerblue;
+}
+
+#photo-upload > label {
+	pointer-events: none;
+}
+
+#photo-upload > div {
+	position: relative;
+	width: 100%;
+}
+
+#photo-upload > div > p {
+	position: absolute;
+	padding-left: 0.5rem;
+	margin: auto;
+	font-size: 1.25rem;
+	width: 100%;
+	height: 1.25rem;
+	top: 0;
+	bottom: 0;
+	pointer-events: none;
+}
+
+#photo,
+#photo-crop,
+#photo-cropper-area {
+	width: 100%;
+	display: block;
+}
+
+#photo-cropper-area img {
+	display: block;
+	max-width: 100%;
+}
+
+#photo-cropper-controls {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 0.5rem;
+	margin: 1rem 0;
+}
+
+#photo-cropper-controls button {
+	height: 4rem;
+}
+
+#photo-cropper-controls button span {
+	font-size: 1.5rem;
+}
+
+#submit {
+	width: 100%;
+	margin: 0.5rem 0 4rem;
+	border-width: 4px;
+}
+
+#submit span {
+	font-size: 2rem;
+	line-height: 6rem;
+}
+
+#submit:hover,
+#photo-cropper-controls button:hover {
+	box-shadow: 0 0 0.25rem 0.15rem #333;
+}
+
+#submit:focus,
+#photo-cropper-controls button:focus {
+	border-color: cornflowerblue;
+	color: cornflowerblue;
+}
+
+#submit:active,
+#photo-cropper-controls button:active {
+	box-shadow: 0 0 0.5rem #333, inset 0 0 0.5rem #333;
+}
+
+.progress-bar {
+	width: 100%;
+	display: block;
+	margin: 2rem 0 0.5rem;
+	position: relative;
+	height: 4rem;
+}
+
+.progress-bkgd {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #333;
+	border-radius: 8px;
+}
+
+.progress-fill {
+	position: absolute;
+	display: flex;
+	top: 0;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	background-color: cornflowerblue;
+	border-radius: 8px;
+	border: solid #fff3 4px;
+	border-left: none;
+	border-right: none;
+	transition: right 0.33s ease-out;
+}
+
+.progress-fill::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 10%;
+	background: rgb(255,255,255,0);
+	background: -moz-linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -webkit-linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+	animation: progressAnimationMovement 1s linear infinite, progressAnimationFade 1s ease-in-out infinite;
+}
+
+.progress-fill span {
+	font-size: 1.25rem;
+	color: white;
+	position: absolute;
+	text-align: center;
+	align-self: center;
+	left: 0;
+	right: 0;
+}
+
+@keyframes progressAnimationMovement {
+	from {
+		left: 0;
+	}
+	to {
+		left: 90%;
+	}
+}
+
+@keyframes progressAnimationFade {
+	0% {
+		opacity: 0;
+	}
+	
+	25% {
+		opacity: 0.5;
+	}
+	
+	75% {
+		opacity: 0.5;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+
+#msg {
+	display: block;
+	position: fixed;
+	width: 60vw;
+	height: 80vh;
+	background-color: #555;
+	color: white;
+	top: 10vh;
+	left: 20vw;
+	pointer-events: auto;
+	border-radius: 1rem;
+	transform: scale(1);
+	transition: all 0.25s ease-out;
+}
+
+#msg::before {
+	content: "";
+	position: absolute;
+	top: -10vh;
+	left: -20vw;
+	bottom: -10vh;
+	right: -20vw;
+	background-color: #0009;
+	z-index: -1;
+}
+
+#msg > * {
+	margin: 2rem;
+}
+
+#msg h2 {
+	text-transform: capitalize;
+	font-size: 3rem;
+}
+
+#msg p,
+#msg ul li {
+	font-size: 1.5rem;
+}
+
+.closeButton {
+	pointer-events: all;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5rem;
+	height: 5rem;
+}
+
+.closeButton img {
+	width: 100%;
+	height: 100%;
+}
+
+.hidden#msg, span.hidden {
+	opacity: 0;
+	transform: scale(0);
+	pointer-events: none !important;
+}
+
+.hidden > * {
+	display: none;
+}
+
+.hidden::before {
+	display: none;
+}
+
+.progress-fill.disable-anim::after {
+	animation: none;
+	opacity: 0;
+}
+
+button:disabled,
+button[disabled] {
+	pointer-events: none;
+	opacity: 0.33;
+}
+
+.tippy-content {
+	font-size: 1.25rem;
+}
+
+.tippy-box {
+	background-color: #444;
+	color: #eee;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+::selection,
+::-moz-selection {
+	color: #bbb;
+	background-color: #333;
+}
+
+@media screen and (orientation: portrait) {
+	body {
+		width: 99vw;
+		overflow-x: hidden;
+	}
+	
+	body > p,
+	body > h1,
+	body > sub {
+		margin-left: 2.5%;
+	}
+	
+	.row,
+	#photo,
+	.alt-row {
+		width: 95%;
+		margin: auto;
+	}
+	
+	#photo-cropper-area {
+		width: 85%;
+		margin: auto;
+	}
+	
+	body p,
+	label,
+	input,
+	textarea,
+	#msg p,
+	#msg ul li,
+	.tippy-content,
+	.progress-fill span {
+		font-size: 0.95rem;
+	}
+	
+	.row h2,
+	#msg h2 {
+		font-size: 1.1rem;
+	}
+	
+	#msg {
+		width: 100vw;
+		left: 0;
+		border-radius: 0.25rem;
+	}
+	
+	#msg > * {
+		margin: 0.5rem;
+	}
+	
+	#msg > *:not(.closeButton) {
+		margin-right: 3.5rem;
+	}
+	
+	.closeButton {
+		width: 3rem;
+		height: 3rem;
+	}
+}

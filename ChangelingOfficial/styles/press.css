@@ -1,0 +1,302 @@
+/* Html/body/main styles */
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	height: 100%;
+	background-color: #ddd;
+}
+
+body{
+	top:1px;
+	bottom:1px;
+	left:1px;
+	right:1px;
+	background-color: #ddd;
+	height: 100%;
+	color: #333;
+	font-family: 'Lato', sans-serif;
+}
+
+main {
+	width: 60%;
+	margin-left: 10%;
+	height: 65%;
+}
+
+/* Image hover */
+.ss:hover {
+	cursor: pointer;
+}
+
+/* Logo */
+.press-logo {
+	max-width: 500px;
+	padding: 1rem;
+}
+
+/* Logo alignment */
+.logo-div {
+	text-align: center;
+	justify-content: center;
+}
+
+::selection,
+::-moz-selection {
+	color: #bbb;
+	background-color: #333;
+}
+
+/* Reduced motion */
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+/* Link styles */
+.pagenav a, 
+.pagenav a:link {
+	color: rgb(81, 66, 94);
+	font-weight: bold;
+}
+
+a:visited {
+	color: #4d2c6d;
+}
+
+/* Sidebar styles */
+.pagenav {
+	position: fixed;
+	right: 10%;
+	top: 40%;
+}
+
+.pagenav ul {
+	list-style: none;
+	padding-left: 0;
+	transition: all 0.5s ease-in-out;
+	margin-right:15px;
+}
+
+.pagenav ul li {
+	font-size: 1.4rem;
+}
+
+.pagenav p {
+	background-color: white;
+	cursor: pointer;
+	padding: 0.25rem 0.5rem;
+	/*position: absolute;*/
+	right: 0;
+	border: 3px solid #bbb;
+	border-radius: 8px;
+	transition: all 0.1s ease-in-out;
+}
+
+.pagenav p:focus {
+	border-color: #555;
+}
+
+.pagenav p:hover {
+	box-shadow: 0 0 0.5rem #555;
+}
+
+.pagenav p:active {
+	border-color: #222;
+}
+
+.pagenav.hidden ul {
+	transform: translateX(400%);
+}
+
+/* Header */
+header {
+	height: 40%;
+}
+
+header > div {
+	background-color: #51425e;
+	background-image: url(../images/outside_blurred.jpg);
+	background-size: cover;
+	background-position: center center;
+	padding-top: 80px;
+}
+
+/* Content section */
+article {
+	margin-top: 2rem;
+}
+
+article h1 {
+	text-transform: uppercase;
+}
+
+section {
+	margin: 2rem 0;
+	border-top: 2px solid black;
+	padding: 2rem 0;
+}
+
+section h2 {
+	position: relative;
+	border-bottom: 0.25rem solid gray;
+	width: auto;
+	display: inline;
+	padding-bottom: 0.5rem;
+}
+
+section h2::after {
+	content: "";
+	position: relative;
+	height: 1.5rem;
+	display: block;
+}
+
+/* Factsheet styles */
+dl {
+	display: grid;
+	grid-template-columns: 16rem auto;
+}
+
+dd {
+	font-weight: lighter;
+}
+
+dl,
+dd,
+p {
+	font-size: 1.2rem;
+}
+
+/* Description image and gameplay trailer */
+.img-wrapper,
+.vid-wrapper-container {
+	position: relative;
+}
+
+.img-wrapper {
+	min-height: 20rem;
+	width: 36rem;
+}
+
+.img-wrapper img,
+.vid-wrapper iframe {
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.img-wrapper img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.vid-wrapper-container {
+	width: 36rem;
+}
+
+.vid-wrapper {
+	padding-top: 56.25%;
+}
+
+.vid-wrapper iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* Screenshots and art image galleries */
+.img-gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 23.5%);
+	grid-gap: 2%;
+}
+
+.img-gallery img {
+	height: auto;
+	width: 100%;
+}
+
+#art img {
+	max-width: 60%;
+}
+
+/* Styles to enlarge images on click */
+.modal-dialog {
+	max-width: 40vw;
+	margin: 10vh auto;
+}
+
+.modal-x-button {
+	margin-bottom: 1rem;
+	color:black;
+}
+
+.modal-x-button:hover {
+	color:black;
+}
+
+/* Responsiveness */
+@media screen and (max-aspect-ratio: 5/4) {
+	.pagenav {
+		right: 1%;
+	}
+
+	main {
+		margin-left: 1%;
+		width: 70%;
+	}
+
+	header {
+		height: 8rem;
+	}
+
+	article h1 {
+		font-size: 1.15rem;
+	}
+
+	section h2 {
+		font-size: 1rem;
+	}
+
+	.press-logo {
+		display: none;
+	}
+	
+
+	dl,
+	dd,
+	p {
+		font-size: 0.95rem;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.pagenav ul li {
+		font-size: 0.9rem;
+	}
+	
+	section h2 {
+		border-bottom-color: transparent;
+		text-decoration: underline;
+	}
+	
+	dl {
+		grid-template-columns: 1fr;
+	}
+	
+	.img-gallery {
+		grid-template-columns: repeat(2, 49%);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-aspect-ratio: 5/4) {
+	.pagenav p {
+		display: none !important;
+	}
+}

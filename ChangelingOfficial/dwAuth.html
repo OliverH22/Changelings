@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>Auth</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/dwAuth.css">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    
+    
+</head>
+<script>
+window.onload = init
+
+function init()
+{
+    let cap = document.querySelector("#checkbox");
+    cap.addEventListener("click", (e) => { checkClicked(); })
+}
+
+function checkClicked()
+{
+    setTimeout(() => {
+        location.replace("aureliaSite.html")
+    }, 3000);
+}
+
+</script>
+<body>
+    <header>
+            <h1 id="authH1">One Touch Investigations</h1>
+            <p>Private Investigation - Memory Revovery - Magical Expertise</p>  
+    </header>
+    <section>
+    </section>
+    <section id="captcha">
+        <div class="spinner">
+            <label>
+                <input id="checkbox" type="checkbox">
+                <span class="checkmark"><span>&nbsp;</span></span>
+            </label>
+        </div>
+            <p id="checkText">I'm not a demon</p>
+            <div id="dcLogo">
+                <img id="catcher" src="images/AureliaSiteImages/dc.svg">
+                <p><b>dreamCAPTCHA</b></p>
+            </div>
+    </section>
+</body>
+</html>
