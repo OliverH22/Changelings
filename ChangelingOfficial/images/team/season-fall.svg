@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 500 500"
+   height="500mm"
+   width="500mm">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer4"
+     style="display:inline">
+    <path
+       id="path886"
+       style="fill:none;fill-opacity:1;stroke:#e64b2d;stroke-width:113.38500056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 944.88281,453.54297 c 0,0 -416.98272,299.52445 -377.95312,491.33893 39.02959,191.8144 224.16974,283.4646 377.95312,283.4646 153.78339,0 338.92159,-91.6502 377.95119,-283.4646 C 1361.8636,753.06742 944.88281,453.54297 944.88281,453.54297 Z"
+       transform="scale(0.26458333)" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#e64b2d;stroke-width:15.00028739;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 249.99999,175 250,365"
+       id="path893" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#e64b2d;stroke-width:15.00028739;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 300,244.99999 249.99999,284.99997 200,244.99999"
+       id="path895" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#e64b2d;stroke-width:15.00028739;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 284.99998,209.99999 -34.99999,25 -34.99999,-25"
+       id="path897" />
+    <ellipse
+       style="fill:none;stroke:#e64b2d;stroke-width:25;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path832-2"
+       cx="250"
+       cy="249.99998"
+       rx="237.5"
+       ry="237.49998" />
+  </g>
+</svg>
